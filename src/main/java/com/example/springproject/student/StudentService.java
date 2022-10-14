@@ -46,7 +46,7 @@ public class StudentService {
     @Transactional
     public void updateStudent(Long studentId, String name, String email) {
         Student student = studentRepository.findById(studentId)
-                .orElseThrow(() -> new IllegalStateException("student with id " + studentId + " dpes not exist"));
+                .orElseThrow(() -> new IllegalStateException("student with id " + studentId + " does not exist"));
 
                 // Checking if name is not null and name is greater than zero
                 // and the name is not the same as the current one then set the name
